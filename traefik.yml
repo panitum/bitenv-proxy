@@ -1,0 +1,29 @@
+global:
+  checkNewVersion: false
+  sendAnonymousUsage: false
+
+entryPoints:
+  web:
+    address: ":80"
+    http:
+      aliasHeadersStrategy: delete
+  websecure:
+    address: ":443"
+    http:
+      aliasHeadersStrategy: delete
+  traefik:
+    address: ":8080"
+    http:
+      aliasHeadersStrategy: delete
+
+providers:
+  docker:
+    exposedByDefault: false
+    network: proxy
+
+api:
+  dashboard: true
+  insecure: true
+
+log:
+  level: INFO
