@@ -19,7 +19,7 @@ entryPoints:
 providers:
   docker:
     exposedByDefault: false
-    network: proxy
+    network: bitenv-proxy
 
 api:
   dashboard: true
